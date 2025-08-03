@@ -13,3 +13,7 @@ task = "shell.exec"
 args = "python3 app.py"
 
 [nix]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
