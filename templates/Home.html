@@ -5,65 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jovian Carriers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- /*resource jo internet ya laptop pe availabo ho toh usko HTML mei include karna ex:- style sheet*/ -->
     <style>
-        h1 {
-            font-size: 40px;
-            font-family: Roboto;
-            font-weight: normal;
-            color: rgb(50, 50, 50);
-            text-align: center;
-        }
-
-        .banner {
-            width: 100%;
+        #banner {
             height: 360px;
+            width: 100%;
             object-fit: cover;
-        }
-
-        h2 {
-            font-family: Roboto;
-            font-size: 32px;
-            color: rgb(100, 100, 100);
-            text-align: center;
-            font-weight: normal;
-        }
-
-        .bodytext {
-            font-family: Roboto;
-            color: rgb(80, 80, 80);
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            /*we can center image by using margin*/
-        }
-
-        .button{
-            text-align: center;/*Isse bhi button center mei and display flex se bhi kar skte hai*/
-
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Jovian Carriers</h1>
-        <!-- <img src="/static/pageIntro.jpg" class="banner"> -->
-        <img src="{{ url_for('static', filename='pageIntro.jpg') }}" alt="intro image" class="banner">
-        <h2>About Jovian</h2>
-        <p class="bodytext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel temporibus at sint harum quam accusamus
+    <div>
+        <h1 class="text-center mt-2 mb-4"></h1>Jovian Carriers</h1>
+        <img src="/static/pageIntro.jpg" class="img-fluid" id="banner">
+        <!-- <img src="{{ url_for('static', filename='pageIntro.jpg') }}" alt="intro image" class="banner"> -->
+        <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel temporibus at sint harum quam accusamus
             deleniti, quidem quis pariatur nostrum impedit provident eveniet sequi voluptatem, doloremque in quas quod
             est
             hic nam eligendi natus similique. Amet dicta facere delectus dolores consequatur! Placeat odio delectus
-            aliquam
+            aliquams
             at ad odit voluptatum illo atque perferendis consequuntur, dolore optio aspernatur vel. Minus modi quia aut
             cumque minima earum quo.</p>
         <h2>Open Positions</h2>
-        <p class="bodytext">TODO - show the jobs here</p>
-        <div class="button">
-            <button>Contact us</button>
-            <p>Copyright &copy; 2025, Jovian</p>
+        <p>TODO - show the jobs here</p>
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg">Contact us</button>
+            <p class="mt-4">Copyright &copy; 2025, Jovian</p>
         </div>
         <p>The static URL is: {{ url_for('static', filename='pageIntro.jpg') }}</p>
     </div>
