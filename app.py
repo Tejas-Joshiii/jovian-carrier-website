@@ -38,9 +38,10 @@ def hello_world():
         # some website allows access to dynamic data using API 
         # Json is simply JavaScript objects
 
-    @app.route("/jobs") # is function ko register karna padega at route(Second route or URL) & JOBs information ko lenge aur convert karenge into JSON String :- jsonify(helper function) ko import(or call) karna isko 
+@app.route("/jobs") # is function ko register karna padega at route(Second route or URL) & JOBs information ko lenge aur convert karenge into JSON String :- jsonify(helper function) ko import(or call) karna isko 
 def list_jobs():
-    return
+    return jsonify(JOBS)
+    
 
 print("Hello flask")
         # Run the application if this script is executed directly
