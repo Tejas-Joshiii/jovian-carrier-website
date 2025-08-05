@@ -1,10 +1,10 @@
-    from flask import Flask, render_template, url_for, jsonify
+from flask import Flask, render_template, url_for, jsonify
         #image ko load karne ke liye templates se url_for ko import karna padega 
         # Create a Flask web application instance
-    app = Flask(__name__)
+app = Flask(__name__)
 
     # data kisi aur jagah hota database mei hamne yha par dynamically data ko render kiya hai  
-    JOBS = [
+JOBS = [
         {
             'id':1,
             'title':'Data Analyst',
@@ -30,21 +30,21 @@
         }
     ]
         # Define a route for the route URL ("/")
-    @app.route("/")
-    def hello_world():
+@app.route("/")
+def hello_world():
         # return render_template(Home.html)
-        return render_template("Home.html",jobs=JOBS,company_name='Jovian')
+    return render_template("Home.html",jobs=JOBS,company_name='Jovian')
 
         # some website allows access to dynamic data using API 
         # Json is simply JavaScript objects
 
     @app.route("/jobs") # is function ko register karna padega at route(Second route or URL) & JOBs information ko lenge aur convert karenge into JSON String :- jsonify(helper function) ko import(or call) karna isko 
-    def list_jobs():
-        return
+def list_jobs():
+    return
 
-    print("Hello flask")
+print("Hello flask")
         # Run the application if this script is executed directly
-    if __name__ == "__main__":
-        app.run(host='0.0.0.0', debug=True)
-        print("I am inside if") 
-    print(__name__)    
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True)
+    print("I am inside if") 
+print(__name__)    
