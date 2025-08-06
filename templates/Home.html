@@ -30,7 +30,8 @@
         <img src="{{ url_for('static', filename='pageIntro.jpg') }}" alt="intro image" id="banner">
         <h2 class="text-center mt-2 mb-4">About Jovian</h2>
         <!--.lead class Makes text larger and lighter Used for	Introductory or important text-->
-        <p class="lead text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel temporibus at sint harum
+        <p class="lead text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel temporibus at
+            sint harum
             quam accusamus
             deleniti, quidem quis pariatur nostrum impedit provident eveniet sequi voluptatem, doloremque in quas quod
             est
@@ -38,25 +39,13 @@
             aliquams
             at ad odit voluptatum illo atque perferendis consequuntur, dolore optio aspernatur vel. Minus modi quia aut
             cumque minima earum quo.</p>
-        <h2 style="margin-left: 6px;">Open Positions</h2>
-        <p>
-            {% for job in jobs %} <!--Loop start-->
-        <!-- <div>
-            <h4 class="loopH4">
-                {{job['title']}}
-            </h4>
-            <div>
-                <b>Location:</b>{{job['location']}}
-            </div>
-            {% if 'salary' in job %}
-            <div>
-                <b>Salary</b>{{job['salary']}}
-            </div> -->
-                {% include 'jobitem.html' %} <!--Reusable piece of code-->
-            {% endif %}
-        </div> <!--Sirf Job ke title seperate line me dikhenge loop ke sath divs bhi iterate honge-->
-        {% endfor %} <!--Loop end-->
-        </p>
+        <h2 style="margin-left: 6px;">Job Openings</h2>
+        <div>
+            {# Read kuch gadbad title in notes #}
+                {% for job in jobs %}
+                {% include 'jobitem.html' %}
+                {% endfor %}
+        </div>
         <div class="text-center">
             <button class="btn btn-primary btn-lg">Contact us</button>
             <p class="mt-4">Copyright &copy; 2025, Jovian</p>
