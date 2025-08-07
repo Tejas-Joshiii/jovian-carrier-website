@@ -13,6 +13,7 @@
             height: 360px;
             width: 100%;
             border-radius: 6px;
+            margin-bottom: 16px;
             object-fit: cover;
         }
 
@@ -23,29 +24,45 @@
     </style>
 </head>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-HoAiqjySvlkaBKeGzL/5NH/UlrgmuN7Jv9MZRtU4TVUXsAxV/J7Ly1gnNUfZGOY6" crossorigin="anonymous"></script> -->
+
 <body>
     {% include 'nav.html' %}
     <div>
-        <h1 class="text-center mt-2 mb-4">{{company_name}} Carriers</h1>
         <!-- <img src="/static/pageIntro.jpg" class="img-fluid" id="banner"> -->
         <img src="{{ url_for('static', filename='pageIntro.jpg') }}" alt="intro image" id="banner">
-        <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+        <h1 class="text-center mt-2 mb-4">{{company_name}} Carriers</h1>
         <!--.lead class Makes text larger and lighter Used for	Introductory or important text-->
-        <p class="lead text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel temporibus at
-            sint harum
-            quam accusamus
-            deleniti, quidem quis pariatur nostrum impedit provident eveniet sequi voluptatem, doloremque in quas quod
-            est
-            hic nam eligendi natus similique. Amet dicta facere delectus dolores consequatur! Placeat odio delectus
-            aliquams
-            at ad odit voluptatum illo atque perferendis consequuntur, dolore optio aspernatur vel. Minus modi quia aut
-            cumque minima earum quo.</p>
+        <div class="row">
+            <div class="col-6">
+                <p class="lead text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel
+                    temporibus
+                    at
+                    sint harum
+                    quam accusamus
+                    deleniti, quidem quis pariatur nostrum impedit provident eveniet sequi voluptatem, doloremque in
+                    quas
+                    quod
+                    est
+                    hic nam eligendi natus similique. Amet dicta facere delectus dolores consequatur! Placeat odio
+                    delectus
+                    aliquams
+                    at ad odit voluptatum illo atque perferendis consequuntur, dolore optio aspernatur vel. Minus modi
+                    quia
+                    aut
+                    cumque minima earum quo.
+                </p>
+            </div>
+            <div class="col-6">
+                <img src="{{ url_for('static',  filename='people.jpg')}}" alt=" people img" style="height: 320px;object-fit: cover;">
+                <!--image is inline tabhi center mei nahi aa rha tha-->
+            </div>
+        </div>
         <h2 style="margin-left: 6px;">Open Positions</h2>
         <div>
             {# Read kuch gadbad title in notes #}
-                {% for job in jobs %}
-                {% include 'jobitem.html' %}
-                {% endfor %}
+            {% for job in jobs %}
+            {% include 'jobitem.html' %}
+            {% endfor %}
         </div>
         <div class="text-center">
             <button class="btn btn-primary btn-lg">Contact us</button>
