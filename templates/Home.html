@@ -33,27 +33,13 @@
         <h1 class="text-center mt-2 mb-4">{{company_name}} Carriers</h1>
         <!--.lead class Makes text larger and lighter Used for	Introductory or important text-->
         <div class="row">
-            <div class="col-6">
-                <p class="lead text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel
-                    temporibus
-                    at
-                    sint harum
-                    quam accusamus
-                    deleniti, quidem quis pariatur nostrum impedit provident eveniet sequi voluptatem, doloremque in
-                    quas
-                    quod
-                    est
-                    hic nam eligendi natus similique. Amet dicta facere delectus dolores consequatur! Placeat odio
-                    delectus
-                    aliquams
-                    at ad odit voluptatum illo atque perferendis consequuntur, dolore optio aspernatur vel. Minus modi
-                    quia
-                    aut
-                    cumque minima earum quo.
+            <div class="col-md-6"> {# col-6 only on medium devices or bigger for to display on half line on screen otherwise it will take whole line(full screen) for smaller device#}
+                <p class="lead text-center">Jovian is an online platform that empowers students and professionals to learn data science, machine learning, and full-stack web development through practical, project-based courses. With a strong focus on hands-on learning, Jovian offers high-quality content, real-world assignments, and community support to help learners build a strong portfolio. The platform also connects learners to job opportunities by hosting career-focused programs and collaborations with hiring partners. Whether you're starting out or upskilling, Jovian helps you become job-ready with in-demand tech skills.
                 </p>
             </div>
-            <div class="col-6">
-                <img src="{{ url_for('static',  filename='people.jpg')}}" alt=" people img" style="height: 320px;object-fit: cover;">
+            <div class="d-none d-md-block col-6"> {# only displayed on medium or larger screen not displayed for mobile (block means visible) d-none:-display none#}
+                <img src="{{ url_for('static', filename='people.jpg')}}" alt=" people img"
+                    style="height: 320px;object-fit: cover;margin-left: 20px;border-radius: 4px;">
                 <!--image is inline tabhi center mei nahi aa rha tha-->
             </div>
         </div>
@@ -65,7 +51,7 @@
             {% endfor %}
         </div>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact us</button>
+            <a class="btn btn-primary btn-lg" type="button" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opening&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Questions%3A%20%3CEnter%20question%20here%3E">Contact us</a>
             <p class="mt-4">Copyright &copy; 2025, Jovian</p>
         </div>
         <p>The static URL is: {{ url_for('static', filename='pageIntro.jpg') }}</p>
